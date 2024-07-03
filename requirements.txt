@@ -1,0 +1,6 @@
+pymupdf
+openai
+pytesseract
+pdf2image
+ipykernel
+pandas
