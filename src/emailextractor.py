@@ -28,34 +28,38 @@ from email.parser import BytesParser
 #     └ requirements.txt
 
 class EmailExtractor:
-    def __init__(self, input_dir, output_dir, overwrite=False, delete=False):
+    def __init__(self, input_path, output_dir, mode='directory', overwrite=False, delete=False):
         self.overwrite = overwrite  # overwrite existing attachments files, if they have the same name
         self.delete = delete        # delete emails directly after processing
-        self.input_dir = input_dir
+        self.input_dir = input_path
         self.output_dir = output_dir
         self.email_paths = []
-        self.emails = self.process_email_directory(input_dir, output_dir)
+        if mode == 'directory':
+            self.email_paths = [os.path.join(input_path, filename) for filename in os.listdir(input_path)]
+        elif mode == 'list':
+            self.email_paths = input_path
+
+        self.emails = self.process_emails(output_dir)
         self.emails_df = pd.DataFrame.from_dict(self.emails, orient='index')
 
-    def process_email_directory(self, input_dir, output_dir):
+
+    def process_emails(self, output_dir):
         # Processes all .msg files in the input directory, extracts email components and attachments and saves the attachments to the specified output directory.
         emails = dict()
-        for filename in os.listdir(input_dir):
-            file_path = os.path.join(input_dir, filename)
+        for file_path in self.email_paths:
+            filename = os.path.basename(file_path)
             if filename.lower().endswith('.msg'):
                 email_data = self.parse_msg_file(file_path, output_dir)
                 emails[filename] = email_data
                 if self.delete:
                     os.remove(file_path)
-                else:
-                    self.email_paths.append(file_path)
+                    self.email_paths.remove(file_path)
             elif filename.lower().endswith('.eml'):
                 email_data = self.parse_eml_file(file_path, output_dir)
                 emails[filename] = email_data
                 if self.delete:
                     os.remove(file_path)
-                else:
-                    self.email_paths.append(file_path)
+                    self.email_paths.remove(file_path)
         return emails
 
     def parse_msg_file(self, file_path, output_dir):
@@ -162,7 +166,7 @@ if __name__ == '__main__':
     if not os.path.exists(attachments_output_directory):
         os.makedirs(attachments_output_directory)
 
-    email_data = EmailExtractor(email_input_directory, attachments_output_directory, overwrite=True, delete=False)
+    email_data = EmailExtractor(email_input_directory, attachments_output_directory, mode='directory', overwrite=False, delete=False)
     
     email_data_csv_path = '../data/email_data.csv'
     email_data_json_path = '../data/email_data.json'
