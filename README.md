@@ -63,3 +63,12 @@ sudo apt install tesseract-ocr-deu
 ```
 #### LM Studio
 You need LM-studio and run the models there. 
+
+
+## Program structure
+Currently, the structure looks like this: 
+![current structure](documentation/current_structure.jpg)
+
+
+The planned structure looks like this: 
+![planned structure](documentation/planned_structure.jpg)
