@@ -24,4 +24,3 @@ sudo apt install tesseract-ocr-deu
 ```
 #### LM Studio
 You need LM-studio and run the models there. 
-
