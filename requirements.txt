@@ -6,4 +6,5 @@ pdf2image
 ipykernel
 pandas
 transformers
+extract_msg
 python-dotenv
