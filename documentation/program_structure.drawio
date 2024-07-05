@@ -1,5 +1,5 @@
-<mxfile host="app.diagrams.net" modified="2024-07-05T08:24:29.488Z" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:127.0) Gecko/20100101 Firefox/127.0" etag="cEljr0MTDDTXHjrlBPaj" version="24.6.4" type="device" pages="2">
-  <diagram name="PlannedStructure" id="1px-16hLUVlMR7R9mzSF">
+<mxfile host="app.diagrams.net" modified="2024-07-05T09:52:31.307Z" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:127.0) Gecko/20100101 Firefox/127.0" etag="N-ZunqxkAk1OZKPNVU8O" version="24.6.4" type="device" pages="2">
+  <diagram name="planned_structure" id="1px-16hLUVlMR7R9mzSF">
     <mxGraphModel dx="1434" dy="746" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
       <root>
         <mxCell id="0" />
@@ -134,7 +134,7 @@
         <mxCell id="kxUdN-J0pOm-MrYwGBp3-66" value="sort PDF into Folder" style="sketch=0;pointerEvents=1;shadow=0;dashed=0;html=1;strokeColor=#505050;fillColor=#FCD765;labelPosition=center;verticalLabelPosition=bottom;verticalAlign=top;outlineConnect=0;align=center;shape=mxgraph.office.concepts.folders;strokeWidth=1;" vertex="1" parent="1">
           <mxGeometry x="1100" y="710" width="57" height="53" as="geometry" />
         </mxCell>
-        <mxCell id="kxUdN-J0pOm-MrYwGBp3-50" value="Llama3-8B-Extract" style="sketch=0;outlineConnect=0;fontColor=#232F3E;gradientColor=none;fillColor=#01A88D;strokeColor=none;dashed=0;verticalLabelPosition=bottom;verticalAlign=top;align=center;html=1;fontSize=12;fontStyle=0;aspect=fixed;pointerEvents=1;shape=mxgraph.aws4.sagemaker_model;" vertex="1" parent="1">
+        <mxCell id="kxUdN-J0pOm-MrYwGBp3-50" value="Llama3-8B-Instruct" style="sketch=0;outlineConnect=0;fontColor=#232F3E;gradientColor=none;fillColor=#01A88D;strokeColor=none;dashed=0;verticalLabelPosition=bottom;verticalAlign=top;align=center;html=1;fontSize=12;fontStyle=0;aspect=fixed;pointerEvents=1;shape=mxgraph.aws4.sagemaker_model;" vertex="1" parent="1">
           <mxGeometry x="1089.5" y="471" width="78" height="78" as="geometry" />
         </mxCell>
         <mxCell id="kxUdN-J0pOm-MrYwGBp3-65" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="kxUdN-J0pOm-MrYwGBp3-60" target="kxUdN-J0pOm-MrYwGBp3-32">
@@ -183,7 +183,7 @@
       </root>
     </mxGraphModel>
   </diagram>
-  <diagram id="ojcf10Glu5HG5ULUEq8R" name="CurrentStructure">
+  <diagram id="ojcf10Glu5HG5ULUEq8R" name="current_structure">
     <mxGraphModel dx="1434" dy="746" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
       <root>
         <mxCell id="0" />
@@ -287,7 +287,7 @@
         <mxCell id="xHjuYKORNIZf4xrYKCIg-5" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="cxQYV4MnSIQwxU7fWbH_-38" target="xHjuYKORNIZf4xrYKCIg-3">
           <mxGeometry relative="1" as="geometry" />
         </mxCell>
-        <mxCell id="cxQYV4MnSIQwxU7fWbH_-38" value="Llama3-8B-Extract" style="sketch=0;outlineConnect=0;fontColor=#232F3E;gradientColor=none;fillColor=#01A88D;strokeColor=none;dashed=0;verticalLabelPosition=bottom;verticalAlign=top;align=center;html=1;fontSize=12;fontStyle=0;aspect=fixed;pointerEvents=1;shape=mxgraph.aws4.sagemaker_model;labelBackgroundColor=default;" vertex="1" parent="1">
+        <mxCell id="cxQYV4MnSIQwxU7fWbH_-38" value="Llama3-8B-Instruct" style="sketch=0;outlineConnect=0;fontColor=#232F3E;gradientColor=none;fillColor=#01A88D;strokeColor=none;dashed=0;verticalLabelPosition=bottom;verticalAlign=top;align=center;html=1;fontSize=12;fontStyle=0;aspect=fixed;pointerEvents=1;shape=mxgraph.aws4.sagemaker_model;labelBackgroundColor=default;" vertex="1" parent="1">
           <mxGeometry x="1089.5" y="358.5" width="78" height="78" as="geometry" />
         </mxCell>
         <mxCell id="cxQYV4MnSIQwxU7fWbH_-39" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="cxQYV4MnSIQwxU7fWbH_-40" target="cxQYV4MnSIQwxU7fWbH_-22">
